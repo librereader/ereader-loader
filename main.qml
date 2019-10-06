@@ -54,7 +54,7 @@ ApplicationWindow {
                         ProcessManager {
                             id: coolreader_p
                             command: "zenity --info --text=launched"
-                            onReadySignal: {
+                            onFinished: {
                                 window.show();
                             }
                         }

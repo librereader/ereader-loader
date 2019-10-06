@@ -17,7 +17,7 @@ public:
         return mCommand;
     }
 signals:
-    void readySignal(int exitCode, QProcess::ExitStatus exitStatus);
+    void finished(int exitCode, QProcess::ExitStatus exitStatus);
 private:
     QString mCommand;
     SandboxedProcess mProcess;
