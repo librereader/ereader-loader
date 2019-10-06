@@ -12,12 +12,9 @@ int main(int argc, char *argv[])
     qmlRegisterType<ProcessManager>("il.luminati", 1, 0, "ProcessManager");
 
     QGuiApplication app(argc, argv);
-    app.setQuitOnLastWindowClosed(false);
+    //app.setQuitOnLastWindowClosed(false);
 
     QQmlApplicationEngine engine;
-    // LoaderProcess loader;
-    // engine.rootContext()->setContextProperty("loader", &loader);
-
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
     if (engine.rootObjects().isEmpty())
