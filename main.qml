@@ -6,6 +6,8 @@ import QtQuick.Window 2.11
 import QtQuick.Dialogs 1.1
 import QtQml.Models 2.11
 
+import il.luminati 1.0
+
 ApplicationWindow {
     id: window
     visible: true
@@ -49,7 +51,17 @@ ApplicationWindow {
                     id: views
                     ListObjectItem {
                         label: qsTr("Start CoolReader")
-                        onClicked: console.log("process started")
+                        ProcessManager {
+                            id: coolreader_p
+                            command: "zenity --info --text=launched"
+                            onReadySignal: {
+                                window.show();
+                            }
+                        }
+                        onClicked: {
+                            window.hide();
+                            coolreader_p.run();
+                        }
                     }
                     ListObjectItem {
                         label: qsTr("About")

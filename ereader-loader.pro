@@ -8,4 +8,9 @@ QT += quick quickcontrols2
 
 RESOURCES += qml.qrc
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+            ProcessManager.cpp \
+            SandboxedProcess.cpp
+
+HEADERS +=  ProcessManager.h \
+            SandboxedProcess.h

@@ -1,5 +1,6 @@
-ereader-system
+ereader-loader
 *.o
 Makefile*
 qrc_*
+moc_*
 .qmake.stash
