@@ -1,0 +1,5 @@
+ereader-system
+*.o
+Makefile*
+qrc_*
+.qmake.stash
